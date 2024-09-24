@@ -1,8 +1,12 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -11,11 +15,13 @@ h1 {
   font-size: 2em;
 }
 
+/* Container and sections styling */
 .container {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
   padding: 0 10px;
+  max-width: 1200px;
 }
 
 .section {
@@ -24,46 +30,47 @@ h1 {
   background-color: #ddd;
   border: 1px solid black;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .title {
+  background-color: #ffcccb;
   padding: 5px;
   position: absolute;
   top: 0;
   right: 0;
   border: 1px solid black;
+  font-weight: bold;
 }
 
-.section:nth-child(1) .title {
-  background-color: #ffcccb; /* Light Red */
-}
-
+/* Specific title background colors */
 .section:nth-child(2) .title {
-  background-color: #f08080; /* Light Coral */
+  background-color: #f08080; /* Beef */
 }
 
 .section:nth-child(3) .title {
-  background-color: #ffebcd; /* Blanched Almond */
+  background-color: #ffebcd; /* Sushi */
 }
 
-/* Tablet View */
+/* Tablet view */
 @media screen and (max-width: 991px) {
   .container {
     flex-wrap: wrap;
   }
+
   .section {
     width: 48%;
     margin-bottom: 20px;
   }
+
   .section:last-child {
     width: 100%;
   }
 }
 
-/* Mobile View */
+/* Mobile view */
 @media screen and (max-width: 767px) {
   .section {
     width: 100%;
-    margin-bottom: 20px;
   }
 }
