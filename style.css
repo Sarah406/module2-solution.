@@ -28,15 +28,32 @@ h1 {
     padding: 10px;
     position: relative;
     width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section p {
+    margin-top: 40px;
+    padding: 10px;
 }
 
 .section .title {
-    background-color: #f08080; /* adjust for different sections */
     position: absolute;
     top: 0;
     right: 0;
     padding: 5px;
     border: 1px solid black;
+}
+
+.section:nth-child(1) .title {
+    background-color: #f08080; /* Chicken */
+}
+
+.section:nth-child(2) .title {
+    background-color: #cd5c5c; /* Beef */
+}
+
+.section:nth-child(3) .title {
+    background-color: #ffd700; /* Sushi */
 }
 
 @media (max-width: 991px) {
